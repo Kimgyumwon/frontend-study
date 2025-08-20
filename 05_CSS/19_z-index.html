@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .parent {
+      width: 600px;
+      height: 350px;
+      background-color: royalblue;
+      /* 자식 요소에서 absolute를 쓰기 위해 부모 위치를 잡아준다 */
+      position: relative;
+    }
+
+    .child-1 {
+      width: 250px;
+      height: 150px;
+      background-color: orange;
+      /* position: static; */
+      position: relative;
+      z-index: 999; /* 위치 기준이 없을 때는 의미 없음 */
+    }
+
+    .child-2 {
+      width: 350px;
+      height: 250px;
+      background-color: coral;
+
+      position: absolute;
+      top: 80px;
+      left: 100px;
+      z-index: 1;
+    }
+
+    .child-3 {
+      width: 250px;
+      height: 300px;
+      background-color: red;
+
+      position: absolute;
+      bottom: 0;
+      right: 130px;
+      z-index: 2;
+    }
+    /* 정리:
+      position이 적용된 요소들이 많을 때 누가 맨 위에 올 것인가?
+      z-index로 요소의 쌓임 순서를 지정(숫자가 높을수록 위에 쌓임)
+    */
+    /* (중요) position 속성의 값이 있어야한다 static제외 Flex items에서도 사용 가능 */
+    /* 주로 fixed 헤더, 슬라이드 메뉴, 콤보 박스, 모달창 등 영역에서 사용된다. */
+    span{
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      font-size: 40px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <body>
+  <div class="parent">
+    <div class="child-1">1</div>
+    <div class="child-2">2</div>
+    <div class="child-3">3</div>
+  </div>
+
+  <!-- (참고) absolute, fixed 가 지정된 요소는 display가 block 으로 바뀐다 -->
+  <span>123</span>
+</body>
+</html>
