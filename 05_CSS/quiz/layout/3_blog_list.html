@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar{
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      margin-left: 100px;
+    }
+    .navbar .item{
+      cursor: pointer;
+    }
+    .item{
+      background-color: #cfc9c9;
+      border-radius: 5px;
+      width: 60px;
+      text-align: center;
+      padding: 10px;
+    }
+    .container{
+      margin: 0 auto;
+      width: 800px;
+      margin-top: 50px;
+    }
+    .blog-list-item{
+      width: 80%;
+      display: flex;
+    }
+    .content-header{
+      display: flex;
+    }
+    .time{
+      margin-left: 10px;
+    }
+    .blog-img{
+      width: 20%;
+      /* 이미지 원본 비율을 유지하고 싶다면 */
+    }
+  </style>
+</head>
+<body>
+  <!-- Tip! 레이아웃 만들기
+    뭘 만들든 레이아웃은 항상 수평(행)으로 자른 후 박스부터 만들고 시작하면 됨
+    그리고 이 박스들을 전부 <div>로 구현해 놓으면 됨(물론 시맨틱 태그도 최대한 활용)
+    그리고 안에 글 넣고 그림 넣고 하면 끝!
+
+    이 때 <div>는 블록 요소이기 때문에 위아래로 배치
+    좌우로 나란히 배치하고 싶으면 display:flex쓰면 됨
+  -->
+  <!-- 이모지 단축키: 윈도우키 + 마침표 -->
+  
+  <!-- navbar -->
+  <nav>
+    <ul class="navbar">
+      <li class="item">영화</li>
+      <li class="item">맛집</li>
+      <li class="item">IT</li>
+      <li class="item">컴퓨터</li>
+    </ul>
+  </nav>
+  
+  <!-- blog list -->
+  <div class="container">
+    <!-- blog list item -->
+    <div class="blog-list-item">
+      <div class="blog-content">
+        <div class="content-header">
+          <!-- 프로필 이미지 -->
+          <img src="/05_CSS/images/logo.png" alt="프로필 이미지" style="width: 40px; height: 40px;">
+          <!-- 작성자, 시간 -->
+          <div class="time"><span style="font-weight: bold;"> kim </span><br> 1시간전 </div>
+        </div>
+        <div class="content-body">
+          <!-- 글 제목, 글 내용 -->
+          <h4>가성비 맛집을 발견했어요!</h4>
+          <div>소고기 맛있어. 초밥 맛있어. 치킨 맛있어. 돼지고기 맛있어. 돈까스 맛있어 숯불닭갈비 맛있어. 한우한우한돈한돈. 피자 맛있어 맛있는 맥주 맛있어. 회맛있어. 한식은 다 맛있어</div>
+        </div>
+      </div>
+      <div class="blog-img">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAzMTZfODMg%2FMDAxNzQyMDc0MTU3NzUw.jelG3ZsLPr5RFogp9bz4Fmm_A9S43UD7o5pNZCLuy-wg.QzIxoWME1Ao2GnyGrZIv4IaxXI4K08_6CgXflmHsq3Yg.PNG%2Fimage.png&type=sc960_832"
+        alt="사진" style="width: 100%;height: 100%; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
