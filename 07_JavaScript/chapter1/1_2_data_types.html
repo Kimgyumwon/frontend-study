@@ -158,12 +158,70 @@
     console.log(arr);
 
     // 배열의 활용 예: 상품 목록, 사용자 목록 등
-
-
-
+const productList = [
+      {
+        productId: 1,
+        productName: '고려은단 비타민C',
+        price: 32900,
+        productImg: 'https://비타민C/이미지경로',
+        brand: '고려은단'
+      }, 
+      {
+        productId: 2,
+        productName: '콘드로이친1200',
+        price: 285000,
+        productImg: 'https://콘드로이친1200/이미지경로',
+        brand: '관절엔'
+      }, 
+      {
+        productId: 3,
+        productName: '에버콜라겐C',
+        price: 210000,
+        productImg: 'https://에버콜라겐C/이미지경로',
+        brand: '뉴트리'
+      }
+    ];
     
+    const userList = [
+      {
+        userId: 'geoblo',
+        name: '김재현',
+        age: 99,
+        email: 'geoblo@naver.com',
+        hobby: ['배드민턴', '싸이클', '스노우보드', '스쿼시', '탁구', '스쿠버 다이빙']
+      },
+      {
+        userId: 'javakim',
+        name: '김자바',
+        age: 10,
+        email: 'jsjs@gmail.com',
+        hobby: ['멍때리기']
+      }
+    ];
+    // 첫번째 상품의 상품 이미지 데이터
+    console.log(productList[0].productImg);
+    // 첫번째 사용자의 취미중 3번째
+    console.log(userList[0].hobby[productList[1].productId]);
 
+    // (참고) JS는 매우 유연한 언어
+    // 변수에 여러 데이터 타입을 넣을 수 있고 값을 넣는 순간에 타입이 결정됨
+    let e = 1;
+    console.log(typeof e); // typeof: 데이터 타입을 체크
+    e = 'abc'
+    console.log(typeof e);
+    e = person;
+    console.log(typeof e);
+    // (참고) 타입 체크
+    // typeof: 현재 값 또는 변수의 자료형을 알아낼 수 있음
+    console.log(typeof undefined);
+    console.log(typeof null); // 타입 object 자바스크립트의 오래된 버그(설계 미스)
+    // 명백한 자바스크립트의 역사적인 버그지만,
+    // 너무 많은 코드가 이 동작에 의존하고 있어서 고칠 수가 없음
+    console.log(typeof userList);
 
+    console.log(Array.isArray(userList));
+    // isArray()확인 배열이 맞으면 true 아니면 false
+    console.log(typeof function () {}); // function
 
   </script>
 </body>
