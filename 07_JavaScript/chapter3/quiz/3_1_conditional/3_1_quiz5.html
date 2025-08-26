@@ -22,23 +22,19 @@
     const avg = (num1 + num2 + num3)/3;
     document.write('합계: ' + sum + '<br>');
     document.write('평균: ' + avg + '<br>');
-    
+    // 최대값
     if (num1 >= num2) {
       if (num1 >= num3){
         document.write('최대값: ' + num1 ,'<br>')
-      } else {
-        document.write('최대값: ' + num3 , '<br>')
       }
     } else if (num2 >= num3) {
-      if (num2 >= num1){
+      if (num2 >= num1) {
         document.write('최대값: ' + num2 ,'<br>')
-      } else {
-        document.write('최대값: ' + num1 ,'<br>')
       }
     } else {
-      document.write('최대값: ' + num3 ,'<br>') 
+        document.write('최대값: ' + num3 ,'<br>')
     }
-
+    // 최소값
     if (num1 <= num2){
       if (num1 <= num3){
         document.write('최소값: ' + num1 ,'<br>')
