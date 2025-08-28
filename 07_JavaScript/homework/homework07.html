@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콤보 세트</title>
+</head>
+<body>
+  <h1>콤보 세트</h1>
+
+  <div>
+    <label for="count">개수: </label>
+    <input type="number" class="count">
+    <button class="btn" type="button">주문</button>
+  </div>
+
+  <div class="imgs">
+  </div>
+
+  <script>
+    const btnEl = document.querySelector(`.btn`);
+    const imgsEl = document.querySelector('.imgs');
+    const countEl =  document.querySelector('.count');
+    
+    btnEl.addEventListener('click' , function () {
+      imgsEl.innerHTML = '';
+      for (let i = 1; i <= countEl.value; i++) {
+        imgsEl.innerHTML += '<img src="./images/popcorn.png" alt="팝콘" class="popcorn"> <img src="./images/coke.png" alt="콜라" class="coke"> <img src="./images/coke.png" alt="콜라" class="coke"><br>';
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>

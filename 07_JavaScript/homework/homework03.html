@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 100%;
+      height: 100%;
+      margin-top: 50px;
+      display: flex;
+    }
+    .ball + .ball {
+      margin-left: 10px;
+    }
+    .ball{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    button + button {
+      margin-left: 10px;
+    }
+    .ball{
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <h1>홀수? 짝수?</h1>
+  <div>
+    <button type="button" class="plus">구슬 추가</button>
+    <button type="button" class="count">홀짝</button>
+    <button type="button" class="reSet">초기화</button>
+  </div>
+  <div class="container">
+  </div>
+
+  <script>
+    const plusEl = document.querySelector('.plus');
+    const containerEl = document.querySelector('.container');
+    // 구슬 추가 이벤트
+    plusEl.addEventListener('click' , function () {
+    containerEl.innerHTML += '<div class="ball"></div>';
+    });
+
+    
+
+
+    // 홀짝 이벤트
+    const countEl = document.querySelector('.count');
+    countEl.addEventListener('click' , function () {
+      const ballEls = document.querySelectorAll('.ball');
+      if (ballEls.length === 0) {alert(`구슬을 추가해주세요`); return;}
+      
+      if (ballEls.length%2 === 0) {
+        alert(`추가된 구슬의 갯수는 ${ballEls.length}개: 짝수입니다`);
+      } else if (ballEls.length%2 === 1){
+        alert(`추가된 구슬의 갯수는 ${ballEls.length}개: 홀수입니다`);
+      };
+    });
+    
+    // 초기화 이벤트
+    const reSetEl = document.querySelector('.reSet');
+    reSetEl.addEventListener('click' , function () {
+      const ballEls = document.querySelectorAll('.ball');
+      ballEls.forEach(function (ballEl,index) {
+        ballEl.remove();
+      })
+    });
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

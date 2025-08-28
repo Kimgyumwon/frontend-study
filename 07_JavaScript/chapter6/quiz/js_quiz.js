@@ -25,7 +25,7 @@ console.log(fruits[1]);
 // Q5 
 // { } 
 // 위 데이터의 종류는?
-// 객체
+// Object(객체)
 
 
 // Q6 
@@ -48,7 +48,7 @@ console.log(obj.xyz);
 // Q9
 // sum(2, 4);
 // 위 함수 호출에서 2, 4를 무엇이라 하는가?
-// 인수
+// 인수, 인자(값), 매개값, Arguments
 
 
 // Q10
@@ -69,9 +69,9 @@ function sum(a, b) {
 // Q12
 // hello 이름의 함수 표현을 작성(함수 표현식)하고 호출하시오! 
 // (표현식과 호출 두개 다 작성할 것!)
-function hello() {
+const hello = function () {
   
-}
+};
 hello();
 
 // Q13

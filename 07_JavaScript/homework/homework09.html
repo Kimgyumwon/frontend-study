@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>귤농장</title>
+  <style>
+    .gyul{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    div {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>귤농장
+    <img src="./images/gyul.png" alt="귤">
+  </h1>
+  <button class="btn">체험시작</button>
+
+  <div class="gyul">
+  </div>
+
+
+  <script>
+    const btnEl = document.querySelector('.btn');
+    const gyulEl = document.querySelector('.gyul');
+    btnEl.addEventListener('click', function () {
+      let g = Number(prompt('몇 그램(g)을 따시겠습니까?'));
+      let count = parseInt(g/10);
+      let weight = 0;
+      for (let i = 1; i <= count ; i++) {
+        weight += 10;
+        gyulEl.innerHTML += `<img src="./images/gyul.png" alt="귤"> <span>귤 ${weight}g</span>`;
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>

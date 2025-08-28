@@ -11,8 +11,8 @@
       color: transparent;
     }
   </style>
-
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_off" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
 </head>
 <body>
   <!-- input(인라인-블록): 사용자로부터 데이터를 입력받는 요소 -->
@@ -93,7 +93,7 @@
   <br>
   <!-- name 속성으로 그룹화 -->
   <!-- 체크박스는 중복 선택 가능, 라디오 버튼은 그룹당 한개만
-   선택 가능 -->
+  선택 가능 -->
   <label>
     <input type="radio" name="fruits" checked>Apple
   </label>
@@ -151,10 +151,33 @@
 
   <!-- 범위 선택(기본값: 0~100) -->
   <label for="volume">음량(0~50)</label>
-  <input type="range" id="volume" min="0" max="50" step="10">
+  <input type="range" id="volume" min="0" max="50" step="1">
+  <!-- Quiz -->
+  <span id="volumeValue"></span>
+  <script>
+    const rangeEl = document.querySelector('#volume');
+    const volumeValueEl = document.querySelector('#volumeValue');
+    
+    volumeValueEl.textContent = rangeEl.value;
+    rangeEl.addEventListener('input' ,function () {
+      if (rangeEl.value === '0'){
+        volumeValueEl.classList.add('material-symbols-outlined');
+        volumeValueEl.textContent = 'volume_off';
+      } else if ( rangeEl.value === '50' ) {
+        volumeValueEl.classList.add('material-symbols-outlined');
+        volumeValueEl.textContent = 'volume_up';
+      } else {
+        volumeValueEl.classList.remove('material-symbols-outlined');
+        volumeValueEl.textContent = rangeEl.value;
+      }
 
+    });
+
+  </script>
   <hr>
-
+  <!-- <span class="material-symbols-outlined">
+volume_up
+</span> -->
   <!-- 비밀번호 -->
   <label for="pwd">비밀번호: </label>
   <input type="password" id="pwd" maxlength="10" minlength="5">
@@ -163,8 +186,8 @@
 
   <!-- 셀렉트 박스(콤보 박스) -->
   <!-- 속성
-   value: 서버로 전송되는 선택한 항목의 실제값
-   selected: 항목을 미리 선택
+  value: 서버로 전송되는 선택한 항목의 실제값
+  selected: 항목을 미리 선택
   -->
   <label for="cars">차량 선택:</label>
   <select id="cars">

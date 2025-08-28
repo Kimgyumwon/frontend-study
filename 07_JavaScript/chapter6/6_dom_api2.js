@@ -21,7 +21,6 @@ boxEls[0].addEventListener('click',function () {
   console.log(boxEls);
   
 })
-
 // 요소의 내용 확인 및 수정
 const boxEl = document.querySelector('.box');
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 만들기</title>
+</head>
+<body>
+  <h1>행 열 갯수 각각 입력받아 테이블 만들기</h1>
+  <button class="table" type="button">테이블 생성</button>
+  <div class="table1">
+    
+  </div>
+
+<script>
+  const tableEl = document.querySelector('.table');
+  const table1El = document.querySelector('.table1');
+  tableEl.addEventListener('click' , function () {
+    
+    let row = Number(prompt('테이블 행의 갯수는?'));
+    let colum = Number(prompt('테이블 열의 갯수는?'));
+    let num = 1;
+    let table1 = '<table border="1">';
+    for (let i = 1; i <= row; i++) {
+      table1 += '<tr>';
+        for (let j = 1; j <= colum; j++) {
+          table1 += `<td>${num}</td>`;
+          num++;
+        }
+      table1 += '</tr>';
+    }
+    table1 += '</table>';
+    table1El.innerHTML = table1;
+  });
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      border: 2px solid greenyellow;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>스폰지밥, 뚱이, 징징이</h1>
+  <div>
+    <select name="character" id="characterScroll">
+      <option value="sponge">스폰지밥</option>
+      <option value="dung">뚱이</option>
+      <option value="human">징징이</option>
+    </select>
+    <img src="https://file.notion.so/f/f/dc5fdb89-792d-4870-b71f-1a167db5e23c/1a58b4db-9de6-41b2-9233-c79835c36c88/sponge.png?table=block&id=17dfda8b-ae57-80dd-97aa-cb0c13306ab6&spaceId=dc5fdb89-792d-4870-b71f-1a167db5e23c&expirationTimestamp=1756382400000&signature=ao3SRCBsMX4hvIygpS5rm7p96dz3oabq9y1KuJDgblA&downloadName=sponge.png"
+    alt="캐릭터 사진" class='imgs' width="200px">
+  </div>
+
+<script>
+  const charEl = document.querySelector('#characterScroll');  
+  const imgEl = document.querySelector('.imgs');
+  charEl.addEventListener('change', function () {
+    if (charEl.value === 'sponge'){
+      imgEl.src = `https://file.notion.so/f/f/dc5fdb89-792d-4870-b71f-1a167db5e23c/1a58b4db-9de6-41b2-9233-c79835c36c88/sponge.png?table=block&id=17dfda8b-ae57-80dd-97aa-cb0c13306ab6&spaceId=dc5fdb89-792d-4870-b71f-1a167db5e23c&expirationTimestamp=1756382400000&signature=ao3SRCBsMX4hvIygpS5rm7p96dz3oabq9y1KuJDgblA&downloadName=sponge.png`;
+    } else if (charEl.value === 'dung') {
+      imgEl.src = 'https://file.notion.so/f/f/dc5fdb89-792d-4870-b71f-1a167db5e23c/27cdfff0-de56-4cef-99fc-c6311102c052/dung.png?table=block&id=17dfda8b-ae57-80b5-b1a8-fb86820dcfe6&spaceId=dc5fdb89-792d-4870-b71f-1a167db5e23c&expirationTimestamp=1756382400000&signature=MSCT54EqATemcvOfaXsedTrqucwwST-sMdY0MTnsE5Y&downloadName=dung.png';
+    } else {
+      imgEl.src = 'https://i.namu.wiki/i/S-62hz9SQ6mw4JX9XRp39tOP3jHuv48gVtlzHiBkYoXTgKtSY_0lnqNcQVlZ1s2H2KvoVCDVGPGtKmckZmDrNA.webp';
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
