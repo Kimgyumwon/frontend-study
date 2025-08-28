@@ -9,9 +9,6 @@
       display: flex;
       flex-wrap: wrap;
     }
-    div {
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
@@ -33,7 +30,7 @@
       let weight = 0;
       for (let i = 1; i <= count ; i++) {
         weight += 10;
-        gyulEl.innerHTML += `<img src="./images/gyul.png" alt="귤"> <span>귤 ${weight}g</span>`;
+        gyulEl.innerHTML += `<div class="gyul-item"> <p>귤 ${weight}g</p> <img src="./images/gyul.png" alt="귤"> </div>`;
       }
     });
   </script>
