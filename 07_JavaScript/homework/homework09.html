@@ -25,12 +25,17 @@
     const btnEl = document.querySelector('.btn');
     const gyulEl = document.querySelector('.gyul');
     btnEl.addEventListener('click', function () {
+      gyulEl.innerHTML = '';
       let g = Number(prompt('몇 그램(g)을 따시겠습니까?'));
       let count = parseInt(g/10);
       let weight = 0;
       for (let i = 1; i <= count ; i++) {
         weight += 10;
-        gyulEl.innerHTML += `<div class="gyul-item"> <p>귤 ${weight}g</p> <img src="./images/gyul.png" alt="귤"> </div>`;
+        gyulEl.innerHTML +=`<div class="gyul-item">
+                              <p>귤 ${weight}g</p>
+                              <img src="./images/gyul.png" alt="귤"> 
+                            </div>`;
+
       }
     });
   </script>

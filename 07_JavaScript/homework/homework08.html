@@ -6,7 +6,7 @@
   <title>테이블 만들기</title>
 </head>
 <body>
-  <h1>행 열 갯수 각각 입력받아 테이블 만들기</h1>
+  <h1>행 열 개수 각각 입력받아 테이블 만들기</h1>
   <button class="table" type="button">테이블 생성</button>
   <div class="table1">
     
@@ -17,13 +17,13 @@
   const table1El = document.querySelector('.table1');
   tableEl.addEventListener('click' , function () {
     
-    let row = Number(prompt('테이블 행의 갯수는?'));
-    let colum = Number(prompt('테이블 열의 갯수는?'));
+    let row = Number(prompt('테이블 행의 개수는?'));
+    let column = Number(prompt('테이블 열의 개수는?'));
     let num = 1;
     let table1 = '<table border="1">';
     for (let i = 1; i <= row; i++) {
       table1 += '<tr>';
-        for (let j = 1; j <= colum; j++) {
+        for (let j = 1; j <= column; j++) {
           table1 += `<td>${num}</td>`;
           num++;
         }
