@@ -23,6 +23,13 @@
     // 즉, 원본도 같이 변경됨
 
     // 풀이1
+    const temp = new Array();
+    const copyArr = temp.concat(originArr);
+    console.log(copyArr);
+
+    // (참고) spread 연산자
+    const copyArr2 = [...originArr];
+    console.log(copyArr2);
     
   </script>
 </body>

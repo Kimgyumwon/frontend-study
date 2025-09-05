@@ -18,6 +18,36 @@
 
     // 풀이6
     
+    while (lottoArr.length < 6) {
+      let lottoNumber =  Math.floor(Math.random()*45+1);
+      
+      if (lottoArr.indexOf(lottoNumber) === -1) {
+        lottoArr.push(lottoNumber);
+      }
+      
+    };
+    lottoArr.sort(function(a, b){return a-b});
+    document.write(lottoArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 </html>
